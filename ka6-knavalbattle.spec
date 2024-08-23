@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		knavalbattle
 Summary:	knavalbattle
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3f6f5949f0a258643b7096fb59022432
+# Source0-md5:	13a98fd87c287ec815c81aa57884ebd2
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -48,9 +48,9 @@ destroy all ships wins the game.
 %description -l pl.UTF-8
 Naval Battle to gra w statki dla KDE. Okręty są umieszczone na
 planszy, która reprezentuje morze. Gracze próbują trafić statki
-przeciwnika, nie wiedząc, gdzie się one znajdują, wykonując strzały
-na przemian. Gracz, który pierwszy zatopi wszystkie okręty
-przeciwnika wygrywa.
+przeciwnika, nie wiedząc, gdzie się one znajdują, wykonując strzały na
+przemian. Gracz, który pierwszy zatopi wszystkie okręty przeciwnika
+wygrywa.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -86,3 +86,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knavalbattle
 %{_datadir}/metainfo/org.kde.knavalbattle.appdata.xml
 %{_datadir}/qlogging-categories6/knavalbattle.categories
+%{_datadir}/qlogging-categories6/knavalbattle.renamecategories
